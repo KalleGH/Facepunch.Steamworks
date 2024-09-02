@@ -95,7 +95,8 @@ namespace Steamworks
 		/// </summary>
 		public string GetProperty( string name )
 		{
-			if ( _properties!= null && _properties.TryGetValue( name, out string val ) )
+  			if (name != null && _properties!= null && _properties.TryGetValue( name, out string val ) )
+			//if ( _properties!= null && _properties.TryGetValue( name, out string val ) )
 				return val;
 
 			uint _ = (uint)Helpers.MemoryBufferSize;
